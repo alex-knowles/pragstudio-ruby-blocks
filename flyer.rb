@@ -19,10 +19,15 @@ if __FILE__ == $0
     flyers << Flyer.new("Flyer #{i}", "flyer#{i}@example.com", 1 * i)
   end
   puts flyers
+  puts ""
 
   flyers.each { |f| puts f.email}
 
   sum = 0
   flyers.each { |f| sum += f.miles_flown }
+  puts ""
+
   puts "total miles flown: #{sum}"
+  puts ""
+
 end
