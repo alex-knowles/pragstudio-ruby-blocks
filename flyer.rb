@@ -11,3 +11,13 @@ class Flyer
     "#{name} (#{email}): #{miles_flown}"
   end
 end
+
+if __FILE__ == $0
+
+  flyers = []
+  1.upto(5) do |i|
+    flyers << Flyer.new("Flyer #{i}", "flyer#{i}@example.com", 1 * i)
+  end
+  puts flyers
+
+end
