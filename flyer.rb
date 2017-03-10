@@ -20,4 +20,9 @@ if __FILE__ == $0
   end
   puts flyers
 
+  flyers.each { |f| puts f.email}
+
+  sum = 0
+  flyers.each { |f| sum += f.miles_flown }
+  puts "total miles flown: #{sum}"
 end
