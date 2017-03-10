@@ -1,6 +1,6 @@
-5.times do
-  puts "situp"
-  puts "pushup"
-  puts "chinup"
+5.times do |number|
+  puts "#{number} situp"
+  puts "#{number} pushup"
+  puts "#{number} chinup"
   puts ""
 end
