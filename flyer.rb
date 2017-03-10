@@ -16,12 +16,12 @@ if __FILE__ == $0
 
   flyers = []
   1.upto(5) do |i|
-    flyers << Flyer.new("Flyer #{i}", "flyer#{i}@example.com", 1 * i)
+    flyers << Flyer.new("Flyer #{i}", "flyer#{i}@example.com", 1000 * i)
   end
   puts flyers
   puts ""
 
-  flyers.each { |f| puts f.email}
+  flyers.each { |f| puts "#{f.name} - #{f.miles_flown} miles" }
 
   sum = 0
   flyers.each { |f| sum += f.miles_flown }
