@@ -30,4 +30,12 @@ if __FILE__ == $0
   puts "total miles flown: #{sum}"
   puts ""
 
+  promotions = {
+    "United" => 1.5,
+    "Delta" => 2.0,
+    "Lufthansa" => 2.5
+  }
+  promotions.each { |name, rate| puts "Earn #{rate}x miles by flying #{name}!"}
+  puts ""
+
 end
