@@ -1,4 +1,4 @@
-1.upto(5) do |number|
+1.step(9, 2) do |number|
   puts "#{number} situp"
   puts "#{number} pushup"
   puts "#{number} chinup"
