@@ -38,4 +38,12 @@ if __FILE__ == $0
   promotions.each { |name, rate| puts "Earn #{rate}x miles by flying #{name}!"}
   puts ""
 
+  flyers.each do |flyer|
+    promotions.each do |airline, rate|
+      miles = flyer.miles_flown * rate
+      puts "#{flyer.name} could earn #{miles} miles by flying #{airline}!"
+    end
+  end
+  puts ""
+
 end
