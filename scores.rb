@@ -23,3 +23,7 @@ scores_doubled = scores.map { |s| s * 2 }
 puts "Scores doubled: "
 p scores_doubled
 puts ""
+
+sum_of_scores = scores.reduce(0, :+)
+puts "Sum of scores: #{sum_of_scores}"
+puts ""
