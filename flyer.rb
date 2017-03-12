@@ -53,4 +53,9 @@ name_tags = flyers.map { |f| "#{f.name} (#{f.status.upcase})" }
 puts name_tags
 puts ""
 
+km_flown = flyers.map { |f| f.miles_flown * 1.6 }
+puts "Kilometers flown:"
+puts km_flown
+puts ""
+
 end
