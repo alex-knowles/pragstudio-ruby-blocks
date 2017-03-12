@@ -62,4 +62,8 @@ total_km_flown = km_flown.reduce(0, :+)
 puts "Total kilometers flown: #{total_km_flown}"
 puts ""
 
+total_bronze_km_flown = flyers.select{ |f| f.status == :bronze }.map{ |f| f.miles_flown * 1.6}.reduce(0, :+)
+puts "Total km flown by bronze-status customers: #{total_bronze_km_flown}"
+puts ""
+
 end
