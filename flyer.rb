@@ -16,36 +16,10 @@ end
 
 if __FILE__ == $0
 
-  flyers = []
-  1.upto(5) do |i|
-    flyers << Flyer.new("Flyer #{i}", "flyer#{i}@example.com", 1000 * i)
-  end
-  puts flyers
-  puts ""
-
-  flyers.each { |f| puts "#{f.name} - #{f.miles_flown} miles" }
-
-  sum = 0
-  flyers.each { |f| sum += f.miles_flown }
-  puts ""
-
-  puts "total miles flown: #{sum}"
-  puts ""
-
-  promotions = {
-    "United" => 1.5,
-    "Delta" => 2.0,
-    "Lufthansa" => 2.5
-  }
-  promotions.each { |name, rate| puts "Earn #{rate}x miles by flying #{name}!"}
-  puts ""
-
-  flyers.each do |flyer|
-    promotions.each do |airline, rate|
-      miles = flyer.miles_flown * rate
-      puts "#{flyer.name} could earn #{miles} miles by flying #{airline}!"
-    end
-  end
-  puts ""
+flyers = []
+flyers << Flyer.new("Larry", "larry@example.com", 4000, :platinum)
+flyers << Flyer.new("Moe", "moe@example.com", 1000)
+flyers << Flyer.new("Curly", "curly@example.com", 3000, :gold)
+flyers << Flyer.new("Shemp", "shemp@example.com", 2000)
 
 end
