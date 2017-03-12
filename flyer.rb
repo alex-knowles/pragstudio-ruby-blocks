@@ -66,4 +66,8 @@ total_bronze_km_flown = flyers.select{ |f| f.status == :bronze }.map{ |f| f.mile
 puts "Total km flown by bronze-status customers: #{total_bronze_km_flown}"
 puts ""
 
+top_flyer = flyers.max_by{ |f| f.miles_flown }
+puts "The customer with the most miles flown: #{top_flyer.name}"
+puts ""
+
 end
