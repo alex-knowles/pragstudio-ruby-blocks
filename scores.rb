@@ -27,3 +27,8 @@ puts ""
 sum_of_scores = scores.reduce(0, :+)
 puts "Sum of scores: #{sum_of_scores}"
 puts ""
+
+evens, odds = scores.partition { |s| s.even? }
+puts "Even scores: #{evens}"
+puts "Odd scores: #{odds}"
+puts ""
