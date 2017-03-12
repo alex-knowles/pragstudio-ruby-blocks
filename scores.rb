@@ -18,3 +18,8 @@ puts "A score less than 70 is #{less_than_70}"
 puts ""
 
 # Exercise 4 -- Part II
+
+scores_doubled = scores.map { |s| s * 2 }
+puts "Scores doubled: "
+p scores_doubled
+puts ""
