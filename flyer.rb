@@ -40,4 +40,13 @@ first_bronze = flyers.detect { |f| f.status == :bronze }
 puts "First bronze status customer: " + first_bronze.name
 puts ""
 
+platinum, coach = flyers.partition { |f| f.status == :platinum }
+puts "Platinum status customers:"
+p platinum.map { |f| f.name }
+puts ""
+
+puts "Everyone else in coach:"
+p coach.map { |f| f.name }
+puts ""
+
 end
