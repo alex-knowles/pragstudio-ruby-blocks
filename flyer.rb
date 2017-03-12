@@ -36,4 +36,8 @@ any_platinum = flyers.any? { |f| f.status == :platinum }
 puts "Any platinum status customers: " + any_platinum.to_s
 puts ""
 
+first_bronze = flyers.detect { |f| f.status == :bronze }
+puts "First bronze status customer: " + first_bronze.name
+puts ""
+
 end
