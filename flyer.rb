@@ -22,4 +22,9 @@ flyers << Flyer.new("Moe", "moe@example.com", 1000)
 flyers << Flyer.new("Curly", "curly@example.com", 3000, :gold)
 flyers << Flyer.new("Shemp", "shemp@example.com", 2000)
 
+frequent_flyers = flyers.select { |f| f.miles_flown >= 3000 }
+puts "Frequent flyer customers:"
+puts frequent_flyers
+puts ""
+
 end
