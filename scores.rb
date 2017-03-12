@@ -9,3 +9,8 @@ p low_scores
 puts ""
 
 puts "Any scores less than 70? " + scores.any? { |s| s < 70 }.to_s
+puts ""
+
+less_than_70 = scores.detect { |s| s < 70 }
+puts "A score less than 70 is #{less_than_70}"
+puts ""
