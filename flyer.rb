@@ -49,4 +49,8 @@ puts "Everyone else in coach:"
 p coach.map { |f| f.name }
 puts ""
 
+name_tags = flyers.map { |f| "#{f.name} (#{f.status.upcase})" }
+puts name_tags
+puts ""
+
 end
