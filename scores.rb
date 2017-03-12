@@ -7,3 +7,5 @@ puts ""
 low_scores = scores.reject { |s| s > 80 }
 p low_scores
 puts ""
+
+puts "Any scores less than 70? " + scores.any? { |s| s < 70 }.to_s
