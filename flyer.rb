@@ -32,4 +32,8 @@ puts "Not-so-frequent flyer customers:"
 puts not_frequent_flyers
 puts ""
 
+any_platinum = flyers.any? { |f| f.status == :platinum }
+puts "Any platinum status customers: " + any_platinum.to_s
+puts ""
+
 end
