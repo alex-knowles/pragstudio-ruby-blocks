@@ -27,4 +27,9 @@ puts "Frequent flyer customers:"
 puts frequent_flyers
 puts ""
 
+not_frequent_flyers = flyers.reject { |f| f.miles_flown >= 3000 }
+puts "Not-so-frequent flyer customers:"
+puts not_frequent_flyers
+puts ""
+
 end
