@@ -58,4 +58,8 @@ puts "Kilometers flown:"
 puts km_flown
 puts ""
 
+total_km_flown = km_flown.reduce(0, :+)
+puts "Total kilometers flown: #{total_km_flown}"
+puts ""
+
 end
