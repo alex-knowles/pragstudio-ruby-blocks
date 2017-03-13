@@ -10,6 +10,10 @@ class Song
   def play
     puts "Playing '#{name}' by #{artist} (#{duration} mins)..."
   end
+
+  def tagline
+    "#{@name} - #{@artist}"
+  end
 end
 
 song1 = Song.new("Okie From Muskogee", "Merle", 5)
@@ -37,7 +41,7 @@ class Playlist
   end
 
   def each_tagline
-    each { |song| yield "#{song.name} - #{song.artist}" }
+    each { |song| yield song.tagline }
   end
 end
 
