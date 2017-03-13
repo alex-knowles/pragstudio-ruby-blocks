@@ -26,3 +26,8 @@ class Playlist
     @songs << song
   end
 end
+
+playlist = Playlist.new("Mike's favorites")
+playlist.add_song(song1)
+playlist.add_song(song2)
+playlist.add_song(song3)
