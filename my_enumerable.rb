@@ -24,13 +24,9 @@ module MyEnumerable
   end
 
   def my_detect
-    result = nil
     each do |value|
-      if yield(value)
-        result = value
-        break
-      end
+      return value if yield(value)
     end
-    result
+    nil
   end
 end
