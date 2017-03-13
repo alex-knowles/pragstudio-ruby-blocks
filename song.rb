@@ -82,3 +82,7 @@ puts ""
 
 song1.each_filename { |filename| puts filename }
 puts ""
+
+non_okie_songs = playlist.my_reject { |song| song.name =~ /Okie/ }
+p non_okie_songs.map{ |s| s.name }
+puts ""
