@@ -17,6 +17,8 @@ song2 = Song.new("Ramblin' Man", "Hank", 7)
 song3 = Song.new("Good Hearted Woman", "Waylon", 6)
 
 class Playlist
+  include Enumerable
+
   def initialize(name)
     @name = name
     @songs = []
@@ -41,3 +43,6 @@ playlist.add_song(song2)
 playlist.add_song(song3)
 
 playlist.play_songs
+
+okie_songs = playlist.select { |song| song.name =~ /Okie/ }
+p okie_songs
