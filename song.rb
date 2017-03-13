@@ -89,3 +89,6 @@ puts ""
 
 p playlist.my_detect { |song| song.artist == "Hank" }
 puts ""
+
+p playlist.my_any? { |song| song.artist == "Hank" }
+puts ""
