@@ -14,6 +14,13 @@ class Song
   def tagline
     "#{@name} - #{@artist}"
   end
+
+  def each_filename
+    name = @name.downcase.gsub(" ", "-")
+    artist = @artist.downcase.gsub(" ", "-")
+    extensions = %w(mp3 wav aac)
+    extensions.each { |extension| yield "#{name}-#{artist}.#{extension}" }
+  end
 end
 
 song1 = Song.new("Okie From Muskogee", "Merle", 5)
@@ -68,4 +75,7 @@ playlist.each_by_artist('Hank') { |song| song.play }
 puts ""
 
 playlist.each_by_artist('Waylon') { |song| song.play }
+puts ""
+
+song1.each_filename { |filename| puts filename }
 puts ""
