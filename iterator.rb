@@ -1,7 +1,5 @@
 def three_times
-  yield 1
-  yield 2
-  yield 3
+  1.upto(3) { |n| yield n }
 end
 
 three_times do |number|
