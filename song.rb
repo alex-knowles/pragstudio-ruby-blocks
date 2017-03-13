@@ -43,6 +43,11 @@ class Playlist
   def each_tagline
     each { |song| yield song.tagline }
   end
+
+  def each_by_artist(artist)
+    selected_songs = select { |s| s.artist == artist }
+    selected_songs.each { |s| yield s }
+  end
 end
 
 playlist = Playlist.new("Mike's favorites")
@@ -57,3 +62,10 @@ p okie_songs
 puts ""
 
 playlist.each_tagline { |tagline| puts tagline }
+puts ""
+
+playlist.each_by_artist('Hank') { |song| song.play }
+puts ""
+
+playlist.each_by_artist('Waylon') { |song| song.play }
+puts ""
