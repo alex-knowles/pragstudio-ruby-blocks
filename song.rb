@@ -92,3 +92,7 @@ puts ""
 
 p playlist.my_any? { |song| song.artist == "Hank" }
 puts ""
+
+total_duration = playlist.my_reduce(0) { |sum, song| sum + song.duration }
+p total_duration
+puts ""
