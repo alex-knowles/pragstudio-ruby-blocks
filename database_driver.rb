@@ -23,3 +23,10 @@ class DatabaseDriver
     # executes SQL
   end
 end
+
+driver = DatabaseDriver.new("my_database", "admin", "secret")
+
+driver.connect
+driver.execute("SELECT * FROM ORDERS")
+driver.execute("SELECT * FROM USERS")
+driver.disconnect
