@@ -28,3 +28,20 @@ with_debugging do
   magic_number = (23 - Time.now.hour) * Math::PI
 end
 puts ""
+
+def with_expectation(expected_value)
+  puts "Running test..."
+  actual_value = yield
+  if (expected_value == actual_value)
+    puts "Passed."
+  else
+    puts "Failed!"
+    puts "Expected #{expected_value}, but got #{actual_value}."
+  end
+end
+
+with_expectation(4) { 2 + 2 }
+puts ""
+
+with_expectation(5) { 2 + 2 }
+puts ""
