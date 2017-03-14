@@ -5,9 +5,7 @@ class Canvas
     @width = 100
     @height = 100
     @color = :black
-    if block_given?
-      yield self
-    end
+    yield self if block_given?
   end
 
   def draw_rect(x, y, width, height)
