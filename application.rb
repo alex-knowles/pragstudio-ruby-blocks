@@ -21,6 +21,8 @@ class Application
     original_environment = @environment
     @environment = :production
     yield
+  rescue Exception => e
+    puts e.message
   ensure
     @environment = original_environment
     puts "Reset environment to #{@environment}"
