@@ -17,9 +17,9 @@ class Application
     puts "Writing to #{@environment} log file..."
   end
 
-  def in_production
+  def in_environment(environment)
     original_environment = @environment
-    @environment = :production
+    @environment = environment
     yield
   rescue Exception => e
     puts e.message
@@ -35,10 +35,17 @@ app.handle_request
 app.write_to_log
 puts ""
 
-app.in_production do
+app.in_environment(:production) do
   app.connect_to_database
   app.handle_request
   raise "Boom!"
+  app.write_to_log
+end
+puts ""
+
+app.in_environment(:test) do
+  app.connect_to_database
+  app.handle_request
   app.write_to_log
 end
 puts ""
