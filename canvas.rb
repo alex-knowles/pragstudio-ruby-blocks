@@ -5,6 +5,9 @@ class Canvas
     @width = 100
     @height = 100
     @color = :black
+    if block_given?
+      yield self
+    end
   end
 
   def draw_rect(x, y, width, height)
@@ -27,3 +30,10 @@ canvas.color = :blue
 puts canvas
 puts ""
 
+canvas = Canvas.new do |c|
+  c.width = 800
+  c.height = 600
+  c.color = :green
+end
+puts canvas
+puts ""
