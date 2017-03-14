@@ -1,7 +1,7 @@
 def tag(tag)
   print "<#{tag}>"
   print yield
-  print "</#{tag}>"
+  print "</#{tag}>\n"
 end
 
 tag(:h1) { "Breaking News!" }
@@ -9,3 +9,9 @@ puts ""
 
 tag(:h2) { "Massive Ruby Discovered!" }
 puts ""
+
+tag(:ul) do
+  tag(:li) { "It sparkles!" }
+  tag(:li) { "It shines!" }
+  tag(:li) { "It mesmerizes!" }
+end
