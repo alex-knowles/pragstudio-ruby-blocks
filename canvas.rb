@@ -15,3 +15,15 @@ class Canvas
     "#{@width}x#{@height} #{@color} canvas"
   end
 end
+
+canvas = Canvas.new
+puts canvas
+puts ""
+
+canvas = Canvas.new
+canvas.width = 250
+canvas.height = 500
+canvas.color = :blue
+puts canvas
+puts ""
+
