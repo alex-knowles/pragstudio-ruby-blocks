@@ -21,6 +21,7 @@ class Application
     original_environment = @environment
     @environment = :production
     yield
+  ensure
     @environment = original_environment
     puts "Reset environment to #{@environment}"
   end
@@ -35,6 +36,7 @@ puts ""
 app.in_production do
   app.connect_to_database
   app.handle_request
+  raise "Boom!"
   app.write_to_log
 end
 puts ""
