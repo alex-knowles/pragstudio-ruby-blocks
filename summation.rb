@@ -28,4 +28,5 @@ i_string = ""
   end
 end
 i_string += " = #{summation.to_s}"
+puts
 puts i_string
