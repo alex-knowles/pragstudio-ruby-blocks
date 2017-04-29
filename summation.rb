@@ -14,6 +14,17 @@ def format_square_as_sum(n)
   result
 end
 
+squares = 1.upto(10).map { |n| square(n) }
+summation_string = ""
+squares.each do |square|
+  if (square == squares.last)
+    summation_string += square.to_s
+  else
+    summation_string += "#{square} + "
+  end
+end
+puts summation_string
+
 
 summation = 0
 i_string = ""
