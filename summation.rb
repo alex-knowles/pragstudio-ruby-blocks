@@ -2,13 +2,18 @@ def square(n)
   n * n
 end
 
-def format_square_as_sum(n)
+def format_addends(addends)
   result = ""
-  1.upto(n) do |i|
-    result += n.to_s
-    result += " + " unless i == n
+  addends.each_index do |index|
+    result += addends[index].to_s
+    result += " + " unless index == addends.count - 1
   end
   result
+end
+
+def format_square_as_sum(n)
+  addends = 1.upto(n).map { || n }
+  format_addends(addends)
 end
 
 def summation_of_squares(range)
@@ -17,11 +22,7 @@ def summation_of_squares(range)
 end
 
 squares = 1.upto(10).map { |n| square(n) }
-summation_string = squares.reduce("") do |string, square|
-  string += square.to_s
-  string += " + " unless square == squares.last
-  string
-end
+summation_string = format_addends(squares)
 puts "#{summation_of_squares(1..10)} = #{summation_string}"
 
 
