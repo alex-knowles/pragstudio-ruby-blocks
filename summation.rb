@@ -17,8 +17,7 @@ def format_square_as_sum(n)
 end
 
 def summation_of_squares(range)
-  array_to_square = range.to_a
-  array_to_square.reduce(0) { |sum, n| sum + n * n }
+  range.reduce(0) { |sum, n| sum + n * n }
 end
 
 def print_sum_of_squares(range)
