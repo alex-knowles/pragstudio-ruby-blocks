@@ -21,23 +21,11 @@ def summation_of_squares(range)
   array_to_square.reduce(0) { |sum, n| sum + n * n }
 end
 
-squares = 1.upto(10).map { |n| square(n) }
-summation_string = format_addends(squares)
-puts "#{summation_of_squares(1..10)} = #{summation_string}"
-
-
-summation = 0
-i_string = ""
 1.upto(10) do |i|
   i_squared = square(i)
-  summation += i_squared
   puts "#{i_squared} = #{format_square_as_sum(i)}"
-  if i > 1
-    i_string += " + #{i_squared.to_s}"
-  else
-    i_string = i.to_s
-  end
 end
-i_string += " = #{summation.to_s}"
+squares = 1.upto(10).map { |n| square(n) }
+summation_string = format_addends(squares)
 puts
-puts i_string
+puts "#{summation_of_squares(1..10)} = #{summation_string}"
