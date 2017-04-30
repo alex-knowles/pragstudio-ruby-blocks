@@ -25,9 +25,8 @@ end
 range = 1..10
 
 # print each square number and its component parts
-range.each do |i|
-  i_squared = square(i)
-  puts "#{i_squared} = #{format_square_as_sum(i)}"
+range.each do |n|
+  puts "#{square(n)} = #{format_square_as_sum(n)}"
 end
 
 # calculate the summation of the squared numbers and
