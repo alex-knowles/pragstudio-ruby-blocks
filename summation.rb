@@ -21,11 +21,17 @@ def summation_of_squares(range)
   array_to_square.reduce(0) { |sum, n| sum + n * n }
 end
 
+
 range = 1..10
+
+# print each square number and its component parts
 range.each do |i|
   i_squared = square(i)
   puts "#{i_squared} = #{format_square_as_sum(i)}"
 end
+
+# calculate the summation of the squared numbers and
+# print out the expression each square number being summed
 squares = range.map { |n| square(n) }
 summation_string = format_addends(squares)
 puts
