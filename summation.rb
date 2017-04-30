@@ -5,11 +5,8 @@ end
 def format_square_as_sum(n)
   result = ""
   1.upto(n) do |i|
-    if (i == n)
-      result += n.to_s
-    else
-      result += "#{n.to_s} + "
-    end
+    result += n.to_s
+    result += " + " unless i == n
   end
   result
 end
