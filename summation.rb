@@ -22,7 +22,7 @@ summation_string = squares.reduce("") do |string, square|
   string += " + " unless square == squares.last
   string
 end
-puts summation_string
+puts "#{summation_of_squares(1..10)} = #{summation_string}"
 
 
 summation = 0
