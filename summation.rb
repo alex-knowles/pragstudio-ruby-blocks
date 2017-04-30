@@ -14,6 +14,11 @@ def format_square_as_sum(n)
   result
 end
 
+def summation_of_squares(range)
+  array_to_square = range.to_a
+  array_to_square.reduce(0) { |sum, n| sum + n * n }
+end
+
 squares = 1.upto(10).map { |n| square(n) }
 summation_string = ""
 squares.each do |square|
