@@ -19,11 +19,8 @@ end
 squares = 1.upto(10).map { |n| square(n) }
 summation_string = ""
 squares.each do |square|
-  if (square == squares.last)
-    summation_string += square.to_s
-  else
-    summation_string += "#{square} + "
-  end
+  summation_string += square.to_s
+  summation_string += " + " unless square == squares.last
 end
 puts summation_string
 
