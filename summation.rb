@@ -17,10 +17,10 @@ def summation_of_squares(range)
 end
 
 squares = 1.upto(10).map { |n| square(n) }
-summation_string = ""
-squares.each do |square|
-  summation_string += square.to_s
-  summation_string += " + " unless square == squares.last
+summation_string = squares.reduce("") do |string, square|
+  string += square.to_s
+  string += " + " unless square == squares.last
+  string
 end
 puts summation_string
 
